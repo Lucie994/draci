@@ -1,0 +1,117 @@
+body {
+    font-family: "Trebuchet MS", sans-serif;
+    color: white;
+    background: url('drak.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+/* Pozadí s drakem (pro stránku přihlášky) */
+.dragon-bg {
+    background: url('drak.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Hlavička a patička */
+header, footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Hlavní část stránky */
+main {
+    text-align: center;
+    margin: 40px auto;
+}
+
+/* Nadpisy */
+h1, h2 {
+    color: #FFD700;
+}
+
+/* Sekce s informacemi */
+.info {
+    background-color: rgba(0,0,0,0.6);
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+    margin: 0 auto 20px;
+}
+
+/* Tlačítka */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #ff6600;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.button:hover {
+    background: #ffaa00;
+}
+
+/* Stránka s formulářem */
+.form-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Samotný formulář */
+.dragon-form {
+    background-color: rgba(0,0,0,0.7);
+    padding: 25px;
+    width: 600px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 40px auto;
+}
+
+/* Popisky a vstupy */
+label {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-weight: bold;
+}
+
+input, select {
+    margin-top: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+/* Sekce pro přihlašovací údaje */
+.ucet {
+    border: 2px solid #FFD700;
+    background-color: rgba(255,255,255,0.1);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* Tlačítka ve formuláři */
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+input[type="submit"], input[type="reset"] {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover {
+    background-color: #ffaa00;
+}
