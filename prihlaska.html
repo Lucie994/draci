@@ -11,7 +11,7 @@
     <header>
         <h1>Přihláška do dračí soutěže</h1>
     </header>
-    <form action="https://formsubmit.co/lucie.posavadova@seznam.cz" method="POST">
+    <form action="https://formsubmit.co/lucie.posavadova@seznam.cz" method="POST" enctype="multipart/form-data">
     <main>
         <form class="dragon-form" action="#" method="post" enctype="multipart/form-data">
             
@@ -45,7 +45,7 @@
             </label>
 
             <label>Letový kód draka (např. CZ-48P):
-                <input type="text" name="kod" pattern="[A-Z]{2}-\d+[A-Z]" placeholder="CZ-48P" required>
+                <input type="text" name="kod" pattern="[A-Z]{2}-\d+[A-Z]" placeholder="CZ-48P" >
             </label>
 
             <label>Obrázek draka:
