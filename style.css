@@ -7,7 +7,6 @@ body {
     padding: 0;
 }
 
-
 header, footer {
     text-align: center;
     padding: 20px;
@@ -23,7 +22,6 @@ h1, h2 {
     color: gold;
 }
 
-
 .info {
     background-color: rgba(0,0,0,0.6);
     padding: 20px;
@@ -31,7 +29,6 @@ h1, h2 {
     width: 60%;
     margin: 0 auto 20px;
 }
-
 
 .button {
     display: inline-block;
@@ -47,13 +44,11 @@ h1, h2 {
     background: #ffaa00;
 }
 
-
 .form-page {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
 
 .dragon-form {
     position: relative;
@@ -81,14 +76,12 @@ input, select {
     border: none;
 }
 
-
 .ucet {
     border: 2px solid gold;
     background-color: rgba(255,255,255,0.1);
     padding: 10px;
     border-radius: 8px;
 }
-
 
 .buttons {
     display: flex;
@@ -106,8 +99,6 @@ input[type="reset"] {
     cursor: pointer;
 }
 
-
-
 input[type="submit"] {
     transition: all 0.2s ease;
 }
@@ -117,17 +108,13 @@ input[type="submit"]:hover {
     background-color: rgb(111,22,33);
 }
 
-
-
 input[type="reset"] {
     transition: background-color 0.3s;
 }
 
-
 input[type="reset"]:hover {
     animation: shake 0.6s ease forwards;
 }
-
 
 input[type="reset"]:active {
     transform: translate(0, 0) scale(1);
@@ -143,23 +130,38 @@ input[type="reset"]:active {
     100% { transform: translate(10px,10px) scale(1); }
 }
 
-
-
+/* 🚗 AUTO JEDE JEN DOPŘEDU */
 .car {
     position: fixed;
-    top: 0;
-    left: -100px;
+    top: 50px;
+    left: 0;
     font-size: 40px;
-    animation: drive 5s cubic-bezier(0.4, 0, 1, 1) infinite;
+    animation: drive 6s linear infinite;
+    transform: scaleX(-1);
 }
 
 @keyframes drive {
-    from { left: -100px; }
-    to { left: 110%; }
+    0% {
+        left: 0;          /* levý okraj */
+        transform: scaleX(-1); /* jede doprava */
+    }
+    49% {
+        left: calc(100% - 50px); /* pravý okraj minus šířka auta */
+        transform: scaleX(-1);    /* pořád doprava */
+    }
+    50% {
+        left: calc(100% - 50px);
+        transform: scaleX(-1);   /* otočí auto a jede zpět */
+    }
+    99% {
+        left: 0;          /* levý okraj */
+        transform: scaleX(-1);   /* stále otočené */
+    }
+    100% {
+        left: 0;
+        transform: scaleX(1);    /* otočení dopředu pro další cyklus */
+    }
 }
-
-
-
 .gear {
     position: absolute;
     font-size: 30px;
