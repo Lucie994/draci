@@ -3,81 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Přihláška draka</title>
+    <title>Přihláška - Dračí soutěž</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="form-page dragon-bg">
-    
-    <header>
-        <h1>Přihláška do dračí soutěže</h1>
-    </header>
-    <form action="https://formsubmit.co/lucie.posavadova@seznam.cz" method="POST" enctype="multipart/form-data">
-    <main>
-        <form class="dragon-form" action="#" method="post" enctype="multipart/form-data">
-            
-            <label>Jméno draka*:
-                <input type="text" name="jmeno" required>
-            </label>
+<body class="form-page">
 
-            <label>Pohlaví:
-                <input type="radio" name="pohlavi" value="samec"> Samec
-                <input type="radio" name="pohlavi" value="samice"> Samice
-            </label>
+<header>
+    <h1>Přihláška do soutěže</h1>
+</header>
 
-            <label>Datum narození:
-                <input type="date" name="narozeni" required min="1900-01-01" max="2015-01-01">
-            </label>
+<div class="car">🚗</div>
 
-            <label>Barva šupin:
-                <input type="color" name="barva" style="width:40px; height:40px;">
-            </label>
+<main>
+    <form class="dragon-form">
 
-            <label>Počet sežraných osob:
-                <input type="number" name="obeti" min="0" max="1000">
-            </label>
+        <div class="gear">⚙</div>
 
-            <label>Délka ohnivého dechu (0–100 m):
-                <input type="range" name="dech" min="0" max="100">
+        <label>
+            Jméno draka:
+            <input type="text" required>
+        </label>
+
+        <label>
+            Druh draka:
+            <select>
+                <option>Ohnivý</option>
+                <option>Ledový</option>
+                <option>Lesní</option>
+                <option>Horský</option>
+            </select>
+        </label>
+
+        <label>
+            Věk:
+            <input type="number" min="0">
+        </label>
+
+        <div class="ucet">
+            <label>
+                E-mail:
+                <input type="email">
             </label>
 
             <label>
-                <input type="checkbox" name="certifikat"> Mám certifikát nehořlavosti
+                Heslo:
+                <input type="password">
             </label>
+        </div>
 
-            <label>Letový kód draka (např. CZ-48P):
-                <input type="text" name="kod" pattern="[A-Z]{2}-\d+[A-Z]" placeholder="CZ-48P" >
-            </label>
+        <div class="buttons">
+            <input type="submit" value="Odeslat">
+            <input type="reset" value="Resetovat formulář">
+        </div>
 
-            <label>Obrázek draka:
-                <input type="file" name="obrazek" accept="image/*">
-            </label>
+    </form>
+</main>
 
-            <label>Disciplíny (držením Ctrl vyber více):
-                <select name="discipliny" multiple size="3">
-                    <option>Plivání ohně na cíl</option>
-                    <option>Nejhlasitější řev</option>
-                    <option>Let mezi sopkami</option>
-                </select>
-            </label>
-
-            <fieldset class="ucet">
-                <legend>Účet soutěžícího</legend>
-                <label>Email*:
-                    <input type="email" name="email" required placeholder="např. ohnivy@drak.cz">
-                </label>
-                <label>Heslo*:
-                    <input type="password" name="heslo" required>
-                </label>
-            </fieldset>
-
-            <div class="buttons">
-                <input type="submit" value="Odeslat přihlášku">
-                <input type="reset" value="Reset">
-            </div>
-        </form>
-
-        <a href="index.html" class="button">Zpět na informace</a>
-    </main>
+<footer>
+    <p>© 2026 Dračí liga</p>
+</footer>
 
 </body>
 </html>
